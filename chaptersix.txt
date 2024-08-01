@@ -1,0 +1,161 @@
+                                                                         CHAPTER 6 OF PYTHON- FUNCTIONS AND RECURSION
+
+
+
+
+
+Functions
+
+Block of statements that perform a specific task.
+
+We usually write functions to avoid writing multiple times the same lines of code
+
+Example - 
+
+If we need to find the sum of two numbers say a and b 
+
+instead of doing the usual way of writing 
+a=4
+b= 5
+
+sum(a+b)
+print(sum)
+
+and then writing a and b again but with different numbers we do this - 
+
+
+def find_sum(a,b):
+    sum = a+b
+    print(sum)
+    return sum 
+
+
+and now we can put any variables - 
+
+find_sum (5,10)
+
+find_sum (12,19)
+
+find_sum (14,1)
+
+and this will give those answers 
+
+15
+31
+15
+
+[Done] exited with code=0 in 0.213 seconds
+
+
+There are 2 types of functions- 
+
+1) Built-in functions - 
+
+print()
+len()
+type()
+range()
+
+if you want 2 statements to be printed on the same line write end = " " 
+
+
+2) User defined functions-
+The functions which we build are called user defined functions
+
+Default parameters-
+
+Assigning a default value to parameter, which is used when no argument is passed.
+
+Example- 
+
+def cal_sum (a=4 , b=5):
+    print (a+b)
+    return a+b
+
+
+cal_sum()
+
+
+for writing all the strings in one line we can either use 
+
+print(list)
+
+but this comes with ""
+
+so we can instead define the function as 
+
+def print_list(list):
+    for item in list:
+        print(item, end = " " )
+
+and now we can call our function 
+
+print_list(list) 
+
+
+and this will give us all the items in 1 line 
+
+Example - 
+
+ruits = ("apple", "mango", "banana", "gauva" , "orange" , "lichi")
+
+print(len(fruits))
+
+def print_list(fruits):
+    for item in fruits:
+        print(item , end = " ")
+
+print_list(fruits)
+
+
+and the result is 
+
+apple mango banana gauva orange lichi
+
+
+
+
+
+          RECURSION- 
+
+When a function calls itself repeatedly 
+
+
+this is basically just a more advanced version of loops
+
+Example - 
+
+def show (n): 
+    if (n==0):
+        return
+    print(n)
+    show(n-1)
+
+show(7)
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
