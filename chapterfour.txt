@@ -1,0 +1,310 @@
+                                                                      CHAPTER 4 OF PYTHON- DICTIONARY AND SETS
+
+
+
+
+
+
+Dictionaries- These are used to store data values in key:value pairs
+
+dict= {
+"name" : "Krish" ,
+"cgpa" : "9.0",
+"marks" : [98,97,96]
+}
+
+print(dict)
+
+this is an example of how to write a dictionary
+
+you can enter integer and float values as well
+
+like 
+
+dict= {
+"name" : "Krish" ,
+"cgpa" : "9.0",
+"marks" : [98,97,96],
+"age" : 19,
+"can_drive" : True
+}
+
+print(dict)
+
+
+Points- Dictionaries are unordered, mutable and don't allow duplicate keys
+
+to find out any one value from the given dictionary type 
+
+print(dict["value"])
+
+REMEMBER IT IS SQUARE BRAKCETS AND dict is the given name you assigned, you can give any name.
+
+
+Since, it is mutable you can change the values 
+Example- 
+
+dict["name"] = "Rakazaka"
+
+print(dict["name"])
+And this will give the name as Rakazaka instead of Krish
+
+
+you can add values as well 
+
+Example- 
+
+dict["surname"]= "Jain"
+
+print(dict["name"])
+print(dict["surname"])
+
+NESTED DICTIONARIES- 
+
+student = {
+"name" : "Krish",
+"age" : {
+    "of your friend" : 18,
+    "of your brother" : 19,
+    "of your best friend" : 18
+}
+}
+
+print(student)
+
+
+
+               METHODS-
+
+
+1) mydict.keys()- this given us all the keys used in the dictionary
+
+Example- 
+
+dict= {
+"name" : "Krish" ,
+"cgpa" : "9.0",
+"marks" : [98,97,96],
+"age" : 19,
+"can_drive" : True
+}
+
+print(dict.keys())
+
+And this will give us the answer - 
+dict_keys(['name', 'cgpa', 'marks', 'age', 'can_drive'])
+
+2) mydict.values()- this gives us all the values in the dictionary
+
+Example- 
+
+dict= {
+"name" : "Krish" ,
+"cgpa" : "9.0",
+"marks" : [98,97,96],
+"age" : 19,
+"can_drive" : True
+}
+
+
+print(dict.values())
+
+And this gives us dict_values(['Krish', '9.0', [98, 97, 96], 19, True])
+
+3) mydict.items()- this returns all the (keys, values) pairs as tuples
+
+ Example-
+
+ dict= {
+"name" : "Krish" ,
+"cgpa" : "9.0",
+"marks" : [98,97,96],
+"age" : 19,
+"can_drive" : True
+}
+
+
+print(dict.items())
+
+will give us 
+
+dict_items([('name', 'Krish'), ('cgpa', '9.0'), ('marks', [98, 97, 96]), ('age', 19), ('can_drive', True)])
+
+4) mydict.get("value")- this return the key according to the value
+
+Example- 
+
+ dict= {
+"name" : "Krish" ,
+"cgpa" : "9.0",
+"marks" : [98,97,96],
+"age" : 19,
+"can_drive" : True
+}
+
+print(dict.get("cgpa"))
+ and this gives us "9.0" as the answer
+
+5) mydict.update(newdict)
+
+Example- 
+
+
+ dict= {
+"name" : "Krish" ,
+"cgpa" : "9.0",
+"marks" : [98,97,96],
+"age" : 19,
+"can_drive" : True
+}
+
+dict.update({"city":"Hyderabad"})
+print(dict)
+
+and now city will be added as well
+
+
+             SET 
+
+Set is the collection of the unordered items and each element in the set must be unique and immutable.
+
+nums = {1,2,3,4}
+set2= {1,2,3,2,}
+
+repeated elements will only be stored once
+
+null_set = set{}
+
+
+SET METHODS- 
+
+1)set.add(el)- add an element
+
+Exmaple - 
+
+collection = {1,2,3,4,5}
+collection.add(6)
+
+print(collection)
+
+and the answer is {1,2,3,4,5,6]
+
+2) set.remove(el)- this remove an element
+
+3) set.clear()- this empties the set
+
+4) set.pop()- removes a random value
+
+
+collection = {1,2,3,5,8,21}
+collection.pop()
+print(collection)
+
+collection.pop()
+print(collection)
+
+collection.pop()
+print(collection)
+
+
+if you do this, it will execute the code by removing 1 value so as u keep doing this the number of values will also decrease
+
+the code has done it and you can check there 
+
+print(collection.pop())
+print(collection.pop())
+
+and here randomly 1 value will be removed, not necessarily the same one 
+
+
+all these are run in the code
+
+5) set.union(set2)- this combined two sets and returns the new one
+
+Example- 
+
+collection_1 = {1,2,3}
+collection_2 = {4,5,6}
+
+rakazaka= collection_1.union(collection_2)
+
+print(rakazaka)
+
+and this given us 
+
+rakazaka= {1,2,3,4,5,6}
+
+6) set.intersection(set2)= combines common values and returns new one
+
+Example- 
+
+collection_1 = {1,2,3,4,5,6}
+collection_2 = {4,5,6,7,8,9}
+
+shimataro= collection_1.intersection(collection_2)
+
+print(shimataro)
+
+and this given us 
+
+shimataro = {4,5,6}
+
+
+         QUESTIONS
+
+
+Q) You are given a list of subjects for students. Assume one classroom is required for 1 subject. How many classrooms are needed by all students. 
+
+"python" , "java", "C++" , "python" , "javascript" , "java", "python", "java", "C++" , "C"
+
+
+Ans) subjects = { "python" , "java", "C++" , "python" , "javascript" , "java", "python", "java", "C++" , "C"}
+
+print(len(subjects))
+
+and the answer is 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

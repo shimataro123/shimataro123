@@ -1,0 +1,225 @@
+                                                               CHAPTER 2 OF PYTHON - STRINGS AND CONDITONAL STATEMENTS
+
+
+
+
+                  STRINGS
+
+Strings can be stored either by ' ' or " " or """ """ 
+All three of them are valid but we use " " 
+
+Example - 
+
+str1 = 'This is a string'
+str2 = "This is Krish" 
+str3 = """This is my code"""
+
+To write 2 strings in two different lines we can use "\n"
+
+str4= "This is Krish. \n I like playing cricket"
+and now if we run this code it will print it in the next line.
+
+"\n" is known as escape sequence character
+
+"\t" will provide with a tab of space 
+
+str5= "This is Krish. \t I like playing cricket"
+
+
+BASIC OPERATION ON STRING
+
+1)Concatenation- "hello" + "world" = "helloworld"
+
+Example- 
+         str1= "You"
+         str2= "Tube"
+
+         print(str1+str2)
+
+2)len- this helps us to know the length of the string
+
+Example- 
+
+str1 = "You"
+len1= len(str1)
+print(len1)
+
+str2= "Tube"
+len2= len(str2)
+print(len2)
+
+and the answers will be 3 and 4 respectively
+
+Indexing= this means allotting numbers to each character, which helps us to access characters
+
+KRISH_JAIN WOULD BE 12345678 with KRISH_JAIN respectively
+
+and the code to check this would be 
+
+str= "Krish_jain"
+ch= str[3]
+print(ch) and this can be accessed directly as well
+
+str = "Krish_jain"
+print(str[3]) 
+
+and this would give us S
+
+Slicing  - accessing parts of a string 
+
+the starting will be included but the ending wont be included 
+
+Example- 
+
+str = "Rakazaka" 
+
+str [ 1:4 ]
+
+now do 
+print(str[1:4])
+is "aka"
+
+in python assigning numbers can be done in negative as well
+
+Exmaple - 
+
+School -6,-5,-4,-3,-2,-1 respectively 
+
+str = ("School")
+print(str[-5:-1])
+
+will give us choo
+
+negative ones help in AI-ML
+
+String functions 
+
+1) .ends with 
+
+Lets take a str= "I like playing cricket"
+print(str.endswith("et"))
+
+if it ends with er then it will show true or else false
+
+2) .capitalize = this capitalizes the first letter of the string 
+
+example - 
+
+str= "i like playing cricket"
+print(str.capitalize())
+
+and on running the code it will capitalize the first letter
+
+3) .replace(old,new)
+
+this replaces the old value with some new value 
+
+str = "I like my friends"
+print(str.replace("i","e"))
+
+print(str.replace ("friends", " a few people"))
+
+4) .find(word) this finds the word and gives us its starting index
+
+str = "I like my friends"
+print(str.find("o"))
+
+if something doesn't exist it will show -1
+
+5) .count()- this counts the occurrence of the substring
+
+str= "I love my friends"
+print(str.count("I"))
+
+
+NESTING IS if under if there is another if
+
+Example - 
+
+if (age>=18):
+if (age>=80):
+print ("cannot drive")
+
+else:
+print("can drive")
+
+
+so the code will be 
+age= int(input("type your age :"))
+if(age >=18):
+    if(age >=80):
+        print("cannot drive")
+
+
+PROJECT
+
+Q) Write a program to check if a number entered is even or odd
+
+Ans) num= int(input("type your number :"))
+
+rem= num%2
+
+if(rem==0):
+    print("EVEN")
+else:
+    print("ODD")
+
+Q) Write a program to find the greatest of 3 numbers entered by the user.
+
+Ans) a= int(input("Type your numeber: "))
+b= int(input("Type your number : "))
+c= int(input("Type your number: "))
+
+if(a>b and a>c):
+    print("A is the largest")
+elif(b>c):
+    print("B is the second largest")
+else:
+    print("C is the largest")
+
+
+a= int(input("Type your numeber: "))
+b= int(input("Type your number : "))
+c= int(input("Type your number: "))
+
+
+if(a>b and a>c):
+    print("A is the largest")
+elif(b>a and b>c):
+    print("B is the largest")
+else:
+    print("C is the largest")
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

@@ -1,0 +1,599 @@
+                                                                  CHAPTER 1 OF PYTHON- VARIABLES AND DATA TYPES
+
+
+
+
+Python is a CASE SENSITIVE LANGUAGE!!
+
+If you want two statements in the same line use a comma
+example- 
+print ("My name is Krish Jain." , "I like playing cricket")
+
+If you want them to be in different lines don't use a comma 
+example -
+print ("My name is Krish Jain")
+print ("I like to play cricket")
+
+You can perform mathematical operation as well- addition, subtraction, multiplication, division, etc.
+
+print(22+44)
+and this will give you the sum of these numbers
+
+when putting numbers there is no need of using ""
+
+variables need to have a value in them 
+like 
+age= 23
+name = Krish
+job = coder
+
+etc...
+
+anything under "" will be printed directly
+so if you want print any value you need not use double quotes
+
+example age= 23. name = Krish, etc 
+
+you would have to use 
+
+print (age) and now it will display value as 23 
+if you type print ("age") it will display age and not the value of age
+
+VERY IMPORTANT- YOU HAVE TO MENTION THE VALUES BEFORE GIVING THE COMMAND OF PRINT FOR VALUES!!
+
+if you want a statement with a value then you would have to write it as 
+print("my name is : ",name)
+print("my age is : ", age)
+
+if you write age2=age
+
+and type print(age2)
+it will display 23
+as age2=age
+
+
+                  Things like name, age, career, etc which are mentioned in the left and are assigned values are called variables and these are identifiers
+
+rules for identifiers are = 
+
+*these cannot start with any digits
+
+*you can use any kind of alphabet upper case or lower case and can also use underscore "_"
+so stuff like dhoni1,dhoni_1 are valid but 1dhoni is not. you cannot use two words with a space, instead connect them using _
+
+*we cannot use special characters like @,$,% etc
+
+if you want to know what kind of variable something is just type 
+print(type(your given variable))
+and it will show it 
+
+
+example 
+
+print(type(age))
+now this will show that it is int which stands for integer
+and so on... for decimals it will be "float" 
+ for names and sentences and stuff it will be "string" displayed as "str"
+for True/False it will be "bool"
+for nothing it will be "None type"
+
+another type of data is Boolean which gives either True/False 
+
+FIRST LETTER ALWAYS CAPITAL IN THE ABOVE STATEMENT
+
+old= False
+a=None
+
+and now do print(type(a)) it will say nonetype
+and do print(type(old)) it will say "bool"
+
+keywords cannot be saved as variables
+
+basic arithmetic operations can be done like
+a=5
+b=17
+sum= a+b
+print(sum)
+
+and now you will get the sum of these variables
+
+this can be done for addition, subtraction, multiplication, division
+
+there are things called punctuators which are used to put the code in a structured way like "(), {}, # , etc..."
+
+
+              EXPRESSION EXECUTION - this is very IMPORTANT
+
+1) Str and int can operate together with " * " 
+
+EXAMPLE - 
+
+a,b= 2,3
+txt= "@"
+print(2*txt*3)
+
+which gives @@@@@@ = 6 times cause 2*3= 6 and being multiplied by @ so answer is 
+@@@@@@
+
+2) Str and Str can operate together with " + '
+
+Example = 
+
+A,B = "4", 5
+txt = "k" 
+print((4+txt)*5)
+
+which gives us 4k4k4k4k4k= 5 times cause 4+k=4k and now multiplied 5 times so 
+4k4k4k4k4k
+
+3) Numeric values can operate with all arithmetic operators
+
+Example-
+
+A,B=3,4
+C=5
+print(A+B*C)
+
+which gives the answer 23
+
+4) Arithmetic operation which involves integer and float will give result as float
+
+Example- 
+
+A,B= 3,4.0
+C= A*B
+print(C)
+
+will give us 12.0
+
+5) Arithmetic operation which involved division of two integers which result in decimals will give result in float
+
+Example- 
+
+A,B=1,2
+C=A/B
+print(C)
+
+will give us 0.5
+
+6) Division of float and int will give us int displayed as float
+
+A,B= 1.5,3
+C=A//B
+print(C)
+
+will give us 0.0 instead of 0.5 rounding it of to nearest integer with a decimal even if it is 0.99 it will give us 0.0
+
+7) floor means Greatest Integer Function
+
+floor acts only for division of two integers and the symbol is "//"
+
+A,B=12,5
+C= A//B
+print(C)
+
+will give us answer was 2
+it can give answers for negative as well
+
+A,B=-12,5
+C=A//B
+will give us -3 as answer is -2.2 and the GIF is -3
+
+8) Modulo is represented by "%" which means remainder
+modulo of 2 positive numbers gives us positive
+modulo of 2 negative numbers gives us negative
+modulo of 1st positive number and 2nd negative number gives us negative
+modulo of 1st negative number and 2nd positive number gives us positive
+
+Example-
+
+A,B= -5,2
+C=A%B
+print(C)
+
+will give us 1
+
+other examples mentioned in the code
+
+
+           Single line comments are represented by #
+
+Example- 
+
+#Krish's python learning journey
+
+for multiple line comments we have to use """     """
+
+Example-
+
+"""Krish likes playing cricket
+He also likes listening to songs and watching movies
+He loves his friends and family"""
+
+
+
+
+            INPUT = input() is used to accept values
+
+1) str input 
+   name= input("name is :   ")
+
+2) int input
+   age= int(input("age is :  "))
+
+3) float input
+   price= float(input("price is :  "))
+
+All these when typed will give us an option to give our answer in the dialect aka terminal
+
+but while typing for code just type 
+
+
+name= input("name is :   ")
+age= int(input("age is :  "))
+price= float(input("price is :  "))
+
+to print these values just type 
+print(name)
+print(age)
+print(price)
+
+
+"**" is used for power 
+
+Example- 
+
+A,B= 3,4
+C= A**B
+print(C)
+
+OPERATOR PRECEDENCE 
+
+not>and>or
+
+            CONDITIONAL STATEMENTS-
+
+
+if elif else
+
+1) if(condition):
+                 Statement1    
+
+this implies that if that condition is satisfied then the given statement would be executed 
+
+2) elif(condition):
+                   Statement2
+
+this implies that if condition 1 doesnt satisfy then check condition 2 and then execute the statement if it holds true
+
+3) else : 
+         StatementN
+
+
+
+this implies for other statements
+
+use == when giving a specific value
+
+Example given in the code
+
+
+Example 2
+
+marks= int(input("marks is :  "))
+if(marks >= 90):
+    print("A")
+elif (marks>=80 and marks<90):
+    print("B")    
+else:
+    print("C")
+
+the code in run in the system and it works
+
+
+REMMEBER LOGIC GATES 
+
+AND GATE= if both true then it is true or else false
+OR GATE= if either is true then it is true
+NOT GATE= Opposite of the statement
+
+           PRACTICE QUESTION
+
+
+A=5, G=M
+A=2, G=F
+
+print output for these 
+
+Answer= 
+
+A=int(input("A is :  "))
+G= input("M/F : ")
+
+if ((A==1 or A==2) and G=="M"):
+   print("He is good")
+
+elif ((A==3 or A==4) and G=="F"):
+   print("She is good")
+
+else:
+   print("Everyone is good")
+
+and now you can put the values and check the answer depending upon your values
+
+
+Conditional statements can be executed in a single line as well
+
+
+<var>= <val1> if <condition> else <val2>
+
+Lets understand this with an example 
+
+Example - 
+
+food = input("food is : ")
+eat= "Yes" if food == "cake" or food == "samosa" else "No" 
+print(eat)
+
+depending on your values you will get the answer
+
+Another way of executing conditional statements is 
+
+<stt1> if <condition> else <stt2>
+
+Example-
+
+food = input ("food is : ")
+print("sweet") if food == "cake" or food == "jalebi" else print("not sweet")
+
+and depending upon the value you get the answer
+
+
+clever if - you can write the conditional statement in a line 
+
+Example - 
+
+age = int(input("age is :  " ))
+vote = ("yes", "no" ) [age < 18 ] 
+print(vote)
+
+you can press "ctrl + /" to command out multiple lines
+
+print("Hello World")
+# print("Hello World")
+# print("Hello World")
+# print("Hello World")
+
+
+
+                      TYPES OF OPERATORS
+
+1) Arithmetic Operators like addition, subtraction, multiplication, division, power, modulo (+,-,*,/,**,%)
+
+refer above for how to do these operations 
+
+2) Relational/Comparison Operators- their job is to compare two values
+
+(==,!=,<,>,>=,<=)
+
+== is used for checking equality
+!= is used for saying not equal to 
+the rest mean the same as usual 
+
+Example- 
+
+a=50
+b=20
+
+print(a==b) 
+print (a!=b)
+print(a>b)
+print(a<b)
+
+you get the answers are 
+
+False
+True
+True
+False
+
+3) Assignment operators - they are used to assign values to the variables 
+(=,+=.-=,*=,/=,%=,**=)
+
+num= 10
+num= num + 10
+print(num)
+
+instead of writing num = num+ 10
+we can write it is as num += 10
+and it will do the same job
+
+the same with all other functions like -=, etc...
+
+all the examples are written in the code 
+
+4) Logical Operators these are what we learnt in semiconductors logic gates 
+(not, and, or) 
+
+not is opposite
+and is if both true, only then it will be true 
+or is if either is true, it will be true 
+
+print(not True)
+print(not False)
+
+this will give us the answer
+False
+True
+
+
+a= 50
+b=30
+print(not(a>b))
+
+since a>b it is true but there is a not statement so the final answer will be false 
+
+
+
+val1= True
+val2= False
+print("ans ; ", val1 and val2)
+
+and means if both true only then it will be true, so the answer will be false 
+
+val1= True
+val2= False
+print("ans ; ", val1 or val2)
+
+or means if either is true then it will be true, so the final answer will be true
+
+another example is written in the code 
+
+a=60
+b=40
+val1=True
+val2= False
+
+print("ans is :  ", a==b or val1)
+
+which will give us True 
+
+          
+             TYEP CONVERSION
+
+
+it converts one thing to another
+
+examples are like int+float gives us float
+
+all these examples were given in the operations above
+
+but float + str will give us an error
+
+so do forcefully convert it we have to use type casting
+
+example - 
+
+a,b= 1, "2"
+c= int(b)
+sum = a+c
+print(sum)
+
+and we can convert others 
+like "2"
+to int("2")
+
+so d= int("3")
+e=  4.25
+
+print(type(d))
+
+print ( d + e)
+
+you cannot put sum= a+b etc cause they are of different values
+
+a = 4
+b = "6.25"
+
+c = float(b)
+
+result = a + c
+
+Input ()
+
+name = input("enter your name :  ")
+print("Welcome ", name) 
+
+
+input is always a string
+
+more info about input is already mentioned above
+
+
+some projects are developed after this 
+
+1) Give two inputs of numbers and make a program to find their sum
+2) Enter the value of the length of the side of the square and find its area 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
