@@ -1,0 +1,109 @@
+                                                                            CHAPTER 7 OF PYTHON - FILE INPUT AND OUTPUT
+
+
+
+
+
+
+Python can be used to perform operations on a file. 
+
+Types of all files- 
+
+1) Text Files = .txt .docx .log etc...
+2) Binary Files = .mp4 .mov .png .jpeg etc...
+
+        TOP OPEN , READ AND CLOSE FILES
+
+We have to open a file before reading/writing
+
+f = open("file_name" , "mode")
+
+file_name can be a sample.text or demo.docx
+
+mode can be r:read mode and w:write mode
+
+by default it is set to read mode
+
+
+
+data = f.read()
+f.close()
+
+'r' open for reading (default)
+'w' open for writing, truncating the file first
+'x' create a new file and open it for writing
+'a' open for writing , appending to the end of the file if it exists
+'b' binary mode
+'t' text mode (default)
+'+' open a disk file for updating (reading and writing) 
+
+Reading a file- 
+
+1) data = f.read()
+
+reads entire file
+
+2) data = f.readline()
+
+reads one line at a time
+
+
+Writing to a file 
+
+f = open("sample.text" , "w")
+f.write("I hope I die")
+
+this will delete the previous text and print the new one
+
+to add a a text to existing file 
+
+instead of "w" type "a"
+
+this will add the text 
+
+use \n to write it in the next line
+
+f = open("sample.text" , "a")
+
+f.write("\n I love from friends and family. They are the best. I hope everyone is doing their best and achieve what they wish to.")
+
+r+ overwrites the line but in the starting
+
+
+
+WITH SYNTAX- 
+
+with open ("sample.txt", "a") as f: 
+    data = f.read()
+
+as - this means nothing but allias which is "another name for"
+
+
+
+     DELETING A FILE 
+
+using the os module
+
+Module (like a code library) is a file written by another programmer than generally has a function we can use
+
+import os
+os.remove(filename)  
+
+and we can delete the file 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
