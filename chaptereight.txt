@@ -1,0 +1,409 @@
+                                                                              CHAPTER 8 OF PYTHON- OOPS
+
+                                                                                        PART -1
+
+
+
+
+
+To map with real world scenarios, we started using objects in code. 
+This is called object oriented programming.
+
+
+CLASS AND OBJECT IS PYTHON- 
+Class is a blueprint for creating objects. 
+
+class Student: (class name should start with capital letter)
+    name= "Krish Jain"
+    age= 18
+    
+the above is a class after this we have to write the objects in the class 
+
+s1 = Student() (THIS IS THE OBJECT)
+print(s1.name)
+print(s1.age)
+
+s2= Student()
+print(s2.name)
+
+
+CONSTRUCTER- 
+
+__init__
+
+All classes have a function called __init__() which is always executed when the class is being initiated. 
+
+(the self parameter is a reference to the current instance of the class, and is used to access variables than belong to the class)
+
+def__init__() (self,fullname):
+    self,name = fullname 
+
+is how we create a class 
+
+s1 - Student("Krish")
+print(s1.name) 
+
+is how we create an object
+
+and with the help of this we can give different names to different students within the same class 
+
+Example- 
+
+Class Student: 
+    def __init__(self, name)
+        self.name = name
+        print("Adding new student in the database.")
+
+
+s1 = Student("Krish")
+print.(s1.name)
+
+s2= Student("Rakazaka")
+print(s2.name)    
+
+self.anything means each thing can have a different value
+
+
+      CLASS AND INSTANCE ATTRIBUTES 
+
+
+OBJECT ATTRIBUTE> CLASS ATTRIBUTE (PRECEDENCE ORDER)
+
+Class.attr- the ones which we store only once because they are common
+
+Exmaple - 
+
+if there are 4 students- s1,s2,s3,s4 and they all go to the same college
+
+we need mention the name of the college everytime cause it is common 
+mentioning the name is enough
+
+Example - 
+
+class Student:
+    college_name = "AVADA KADAVRA"
+
+    def __init__(self, name):
+        self.name = name
+        print("Adding new student in the database.")
+
+
+s1 = Student("Krish")
+print(s1.name)
+
+s2= Student("Rakazaka")
+print(s2.name)
+
+
+print(s2.college_name)
+
+
+and this will print the college name for s2
+
+not for everyone 
+since this is not defined with self. 
+it will only be stored once in the memory
+
+
+self. anything is obj.attr
+
+
+
+       METHODS- 
+
+
+Methods are functions that belong to objects. 
+
+functions- string, list, dictionary etc...
+
+STATIC METHODS- 
+
+Methods that don't use the self parameter (work at class level) 
+
+class Student: 
+    @staticmethod
+    def college(): 
+        print("Avada Kadavra")
+
+Student.college()
+
+
+                              IMPORTANT
+
+Abstraction - 
+
+Hiding the implementation details of a class and only showing the essential features to the user. 
+
+Example- 
+
+class Car: 
+    def __init__(self):
+        self.acc = False
+        self.brk = False
+        self. clutch = False
+
+    def start(self):
+        self.clutch = True
+        self.acc = True
+        print("car started")
+
+car1= car()
+car1.start()
+
+
+The unnecessary details like clutch and acc and break will not be mentioned in the final resultant code and it will only say "CAR STARTED"
+
+
+
+ENCAPSULATION- 
+
+Wrapping data and functions into a single unit (object). 
+
+
+
+                                                                                           PART-2 
+
+
+del keyword- 
+
+Used to delete object properties or object itself. 
+
+del s1.name
+del s1
+
+Private(like) attributes and methods- 
+
+Private attributes and methods are meant to be used only within the class and are not accessible from outside the class. 
+
+by adding two underscores before attributes and methodes - "__" it will become private.
+
+Example- 
+
+class Account: 
+    def __init__ (self, acc_no, acc_pass):
+        self.acc_no = acc_no 
+        self.__acc_pas= acc_pass
+
+
+acc1 = Account("12345" , "adgwgw")
+
+print(acc1.acc_no)
+print(acc1.__acc_pass)
+
+It will display error
+
+
+ INHERITANCE- 
+
+When one class (child/derived)derives the properties and methods of another class (parent/base). 
+  
+class Car: this is the parent class which gives its properties
+
+class ToyotaCar (Car) : this is the child class which inherits the properties. 
+
+Example- 
+
+class Car: 
+    @staticmethod
+    def start():
+        print("car started..")
+
+    @staticmethod
+    def stop():
+        print("car stopped.")
+
+class ToyotaCar(Car):
+        def __init__(self,name):
+            self.name = name 
+
+car1= ToyotaCar("honda")
+car2= ToyotaCar("fortuner")
+
+print(car1.start())
+
+
+Types of INHERITANCE- 
+
+1) Single Inheritance- parent to child(only once)
+2) Multi-level Inheritance this means base to child to another child 
+3) Multiple Inheritance- parent 1 and parent2 and parents 3 and so on... can give their properties and child that inherit from all of them
+
+
+SUPER METHOD- 
+
+super() method is used to access methods of the parent class. 
+
+Example- 
+
+class Car: 
+    def __init__(self,type):
+         self.type = type
+
+    @staticmethod
+    def start():
+        print("car started..")
+
+    @staticmethod
+    def stop():
+        print("car stopped.")
+
+class ToyotaCar(Car):
+        def __init__(self,name,type):
+            self.name = name 
+            super().__init__(type)
+
+car1= ToyotaCar("honda", "electric")
+
+print(car1.type)
+
+
+Property- 
+
+We use @property decorator on any method in the class to use the method as a property. 
+
+Example - 
+
+class Student: 
+    def __init__(self, phy, chem, math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+
+    @property
+    def percentage(self):
+        return str((self.phy + self.chem + self.math) / 3) + "%"
+
+
+stu1 = Student(98, 97, 96)
+print(stu1.percentage)  
+
+stu1.phy = 82
+print(stu1.percentage)  
+
+
+POLYMORPHISM - Operator Overloading 
+
+When the same operator is allowed to have different meaning according to the context. 
+
+Operators and Dunder fucntions
+
+Example- 
+
+1) print(1+2)
+print("krish" + "jain")
+print([1,2,3] + [4,5,6]) will give us [1,2,3,4,5,6]
+
+The ones given below are dunder functions which we can modify acc to us- 
+
+
+a__add__b
+a__mul __ b
+a__ sub __ b
+a__ truediv____b
+
+Example- Addition of complex numbers is not defined in python but we can do it. How? Like this - 
+
+ class Complex:
+    def __init__ (self,real,img):
+        self.real = real
+        self.img = img
+
+    def showNumber(self):
+        print(self.real, "i +", self.img, "j")
+
+    def __add__ (self,num2):
+        newReal = self.real + num2.real
+        newImg = self.img + num2.img
+        return Complex(newReal, newImg)
+    
+    def __sub__(self, num2):
+        newReal = self.real - num2.real
+        newImg = self.img - num2.img
+        return Complex(newReal, newImg)
+    
+num1= Complex (1,3)
+num1.showNumber()
+
+num2= Complex (4,8)
+num2.showNumber()
+
+num3= num1 + num2
+num3.showNumber()
+
+
+
+
+
+                                                                                         THE END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
